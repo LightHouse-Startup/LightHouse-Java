@@ -1,22 +1,26 @@
 package light.house.rest.starter;
 
 public class HelloService {
-    private String msg;
     private String name;
 
+    private String language;
+
     public String sayHello() {
-        return name + " say " + msg + " !";
+        return "hello," + name + ",welcome to the " + language + " world !";
     }
-    public String getMsg() {
-        return msg;
+
+    public String getLanguage() {
+        return language;
     }
-    public void setMsg(String msg) {
-        this.msg = msg;
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
