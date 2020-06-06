@@ -1,0 +1,30 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    ssl: false # 是否启用SSL连接
+    password:   # 最好设置密码
+    database: 0 # Redis数据库索引（默认为0)
+    timeout: 5000 # 连接超时时间（毫秒）
+    jedis: # jedis连接Redis，非线程安全，多线程环境下公用一个Jedis连接池来保障线程安全
+      pool:
+        max-active: 100 # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10 # 连接池中的最大空闲连接
+        min-idle: 5 # 连接池中的最小空闲连接
+#    lettuce:  # Lettuce连接Redis，基于Netty，线程安全
+#      shutdown-timeout: 100 # 关闭超时时间
+#      pool:
+#        max-active: 8
+#        max-wait: -1
+#        max-idle: 8
+#        min-idle: 0
+#        time-between-eviction-runs: # 两个空闲连接的线程时间
+
+
+
+
+
+
+
+
